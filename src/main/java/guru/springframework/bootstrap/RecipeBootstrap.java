@@ -107,25 +107,24 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "Chilling tomatoes hurts their flavor, so if you want to add chopped tomato to your guacamole, add it just before serving.  \n" +
                 "4 Serve: Serve immediately, or if making a few hours ahead, place plastic wrap on the surface of the guacamole and press down to cover it and to prevent air reaching it. (The oxygen in the air causes oxidation which will turn the guacamole brown.) Refrigerate until ready to serve. \n");
 
-        Notes guacNotes = new Notes(guacRecipe);
+        Notes guacNotes = new Notes();
         guacNotes.setRecipeNotes("The best guacamole keeps it simple: just ripe avocados, salt, a squeeze of lime, onions, chiles, cilantro, and some chopped tomato. Serve it as a dip at your next party or spoon it on top of tacos for an easy dinner upgrade. ");
 
         guacRecipe.setNotes(guacNotes);
 
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados",new BigDecimal(2), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("salt",new BigDecimal(.5), teaspoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("fresh lime juice",new BigDecimal(2), tablespoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion or thinly sliced green onion",new BigDecimal(2), tablespoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("serrano chillies, stems and seeds removed, minced",new BigDecimal(2), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("cilantro (leaves and tender stems), finely chopped",new BigDecimal(2), tablespoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("freshly grated black pepper",new BigDecimal(2), dashUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato, seeds and pulp removed, chopped",new BigDecimal(.5), eachUom, guacRecipe));
+        guacRecipe.addIngredients(new Ingredient("ripe avocados",new BigDecimal(2), eachUom));
+        guacRecipe.addIngredients(new Ingredient("salt",new BigDecimal(.5), teaspoonUom));
+        guacRecipe.addIngredients(new Ingredient("fresh lime juice",new BigDecimal(2), tablespoonUom));
+        guacRecipe.addIngredients(new Ingredient("minced red onion or thinly sliced green onion",new BigDecimal(2), tablespoonUom));
+        guacRecipe.addIngredients(new Ingredient("serrano chillies, stems and seeds removed, minced",new BigDecimal(2), eachUom));
+        guacRecipe.addIngredients(new Ingredient("cilantro (leaves and tender stems), finely chopped",new BigDecimal(2), tablespoonUom));
+        guacRecipe.addIngredients(new Ingredient("freshly grated black pepper",new BigDecimal(2), dashUom));
+        guacRecipe.addIngredients(new Ingredient("ripe tomato, seeds and pulp removed, chopped",new BigDecimal(.5), eachUom));
 
         guacRecipe.getCategories().add(american);
         guacRecipe.getCategories().add(mexican);
 
         recipes.add(guacRecipe);
-
 
         Recipe tacosRecipe = new Recipe();
         tacosRecipe.setDescription("Spicy grilled Chicken Tacos");
@@ -139,21 +138,21 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "4 Warm the tortillas: Place each tortilla on the grill or on a hot, dry skillet over medium-high heat. As soon as you see pockets of the air start to puff up in the tortilla, turn it with tongs and heat for a few seconds on the other side. Wrap warmed tortillas in a tea towel to keep them warm until serving. \n" +
                 "5 Assemble the tacos: Slice the chicken into strips. On each tortilla, place a small handful of arugula. Top with chicken slices, sliced avocado, radishes, tomatoes, and onion slices. Drizzle with the thinned sour cream. Serve with lime wedges. \n");
 
-        Notes tacosNotes = new Notes(tacosRecipe);
+        Notes tacosNotes = new Notes();
         tacosNotes.setRecipeNotes("Look for ancho chile powder with the Mexican ingredients at your grocery store, on buy it online. (If you can't find ancho chili powder, you replace the ancho chili, the oregano, and the cumin with 2 1/2 tablespoons regular chili powder, though the flavor won't be quite the same.)");
 
         tacosRecipe.setNotes(tacosNotes);
 
-        tacosRecipe.getIngredients().add(new Ingredient("ancho chili powder",new BigDecimal(2), tablespoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("dried oregano",new BigDecimal(1), teaspoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("dried cumin",new BigDecimal(1), teaspoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("sugar",new BigDecimal(1), teaspoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("salt",new BigDecimal(".5"), teaspoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("clove garlic, finely chopped",new BigDecimal(1), eachUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("finely grated orange zest",new BigDecimal(1), tablespoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("fresh-squeezed orange juice",new BigDecimal(3), tablespoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("olive oil",new BigDecimal(2), tablespoonUom, tacosRecipe));
-        tacosRecipe.getIngredients().add(new Ingredient("skinless, boneless chicken thighs (1 1/4 pounds)",new BigDecimal(6), eachUom, tacosRecipe));
+        tacosRecipe.addIngredients(new Ingredient("ancho chili powder",new BigDecimal(2), tablespoonUom));
+        tacosRecipe.addIngredients(new Ingredient("dried oregano",new BigDecimal(1), teaspoonUom));
+        tacosRecipe.addIngredients(new Ingredient("dried cumin",new BigDecimal(1), teaspoonUom));
+        tacosRecipe.addIngredients(new Ingredient("sugar",new BigDecimal(1), teaspoonUom));
+        tacosRecipe.addIngredients(new Ingredient("salt",new BigDecimal(".5"), teaspoonUom));
+        tacosRecipe.addIngredients(new Ingredient("clove garlic, finely chopped",new BigDecimal(1), eachUom));
+        tacosRecipe.addIngredients(new Ingredient("finely grated orange zest",new BigDecimal(1), tablespoonUom));
+        tacosRecipe.addIngredients(new Ingredient("fresh-squeezed orange juice",new BigDecimal(3), tablespoonUom));
+        tacosRecipe.addIngredients(new Ingredient("olive oil",new BigDecimal(2), tablespoonUom));
+        tacosRecipe.addIngredients(new Ingredient("skinless, boneless chicken thighs (1 1/4 pounds)",new BigDecimal(6), eachUom));
 
         tacosRecipe.getCategories().add(american);
         tacosRecipe.getCategories().add(mexican);
